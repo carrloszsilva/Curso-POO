@@ -165,12 +165,14 @@ public class SistemaDespesa {
     private static Scanner scanner;
 
 
-
-Scanner(System.in) no construtor da classe.
     public SistemaDespesa() {
+
         despesas = new ArrayList<>();
+
         tiposDeDespesa = new ArrayList<>();
+
         usuarios = new ArrayList<>();
+
         scanner = new Scanner(System.in);
     }
 
@@ -222,5 +224,54 @@ Scanner(System.in) no construtor da classe.
             System.out.println(usuario);
         }
     }
-    
 
+    //criado metodo main  - 
+
+    //exibe um menu com várias opções e permite ao usuário selecionar uma opção digitando o número
+
+    //correspondente. O programa executa diferentes funções de acordo com a opção escolhida pelo usuário.
+
+    //O programa começa criando um objeto Scanner para receber as entradas do usuário. Em seguida, há 
+
+    //um loop while que continuará sendo executado até que a variável "sair" seja definida como "true".
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean sair = false;
+        while (!sair) {
+            System.out.println("Menu principal");
+            System.out.println("1. Entrar despesa");
+            System.out.println("2. Anotar pagamento");
+            System.out.println("3. Listar despesas em aberto");
+            System.out.println("4. Listar despesas pagas");
+            System.out.println("5. Gerenciar tipos de despesa");
+            System.out.println("6. Gerenciar usuários");
+            System.out.println("7. Sair");
+            int opcao = scanner.nextInt();
+            switch (opcao) {
+                case 1:
+                    entrarDespesa();
+                    break;
+                case 2:
+                    anotarPagamento();
+                    break;
+                case 3:
+                    listarDespesasEmAberto();
+                    break;
+                case 4:
+                    listarDespesasPagas();
+                    break;
+                case 5:
+                    gerenciarTiposDeDespesa();
+                    break;
+                case 6:
+                    gerenciarUsuarios();
+                    break;
+                case 7:
+                    sair = true;
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }
+    }
