@@ -137,20 +137,31 @@ Será apresentado a explicação de dos blocos do código.
 //classes importadas 
 
 import java.util.ArrayList;
+
 import java.util.Date;
+
 import java.util.List;
+
 import java.util.Scanner;
 
 //a classe possui uma lista despesa, tipoDespesa e usúario do tipo list que serão inializados no 
+
 //costrutor da classe. A classe também possui um objeto chamado scanner, do tipo Scanner, que é 
+
 //utilizado para fazer a leitura de dados do usuário a partir do teclado. Esse objeto é inicializado
+
 //como um novo Scanner(System.in) no construtor da classe.
 
 public class SistemaDespesa {
+
     private static final Usuario getUsuario = null;
+
     private static List<Despesa> despesas;
+
     private static List<TipoDeDespesa> tiposDeDespesa;
+
     private static List<Usuario> usuarios;
+
     private static Scanner scanner;
 
 
