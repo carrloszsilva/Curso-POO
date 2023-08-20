@@ -3,3 +3,5 @@
 Conceito de POO. Sistamas de despesas. 
 
 Paramentros para inicialização do programas! 
+
+Verificando se p push funciona 
