@@ -38,7 +38,16 @@ Para fazer isso, você pode seguir os seguintes passos:
 1. Abra o sistema e faça login com suas credenciais de usuário.
 2. Na parte superior da tela, clique no menu e selecione a opção "Relatórios".
 3. Você será redirecionado para a página de relatórios, onde poderá visualizar informações sobre as despesas cadastradas.
-4. Clique no botão "Exportar" e selecione a opção "TXT" no menu suspenso.
+4. Clique no botão "Exportar" e selecione a opção "txt" no menu suspenso.
 5. Escolha um local para salvar o arquivo TXT e clique em "Salvar".
 
-* Esses são os passos básicos para exportar os relatórios do sistema de controle de despesas para um arquivo TXT.
+* Esses são os passos básicos para exportar os relatórios do sistema de controle de despesas para um arquivo txt.
+
+# Explicações Tecnicas do Sistema.
+## Herança e Polimorfismo. 
+
+Herança e polimorfismo são conceitos importantes da programação orientada a objetos que podem ajudar a criar um código mais limpo e organizado. No contexto do sistema de controle de despesas, usa-se a herança para criar uma hierarquia de classes que representam diferentes tipos de despesas. Por exemplo, pode-se ter uma classe mãe `Despesa` que define propriedades e métodos comuns a todas as despesas, como valor, data e descrição. Em seguida, você pode criar classes filhas para representar diferentes categorias de despesas, como `DespesaAlimentacao`, `DespesaTransporte` e `DespesaMoradia`, que herdam as propriedades e métodos da classe `Despesa` e adicionam suas próprias propriedades e métodos específicos.
+
+O polimorfismo permite que você use um único tipo de variável para armazenar objetos de diferentes classes relacionadas por herança. Isso significa que você pode ter uma lista de despesas do tipo `List<Despesa>` que pode armazenar objetos das classes `DespesaAlimentacao`, `DespesaTransporte` e `DespesaMoradia`. Quando você percorre a lista, pode chamar métodos comuns a todas as despesas, como `getValor()` ou `getData()`, sem se preocupar com o tipo específico de cada despesa.
+
+Esses conceitos podem ajudar a tornar o código mais limpo, organizado e fácil de entender, pois permitem que criar uma estrutura clara para representar as diferentes entidades do sistema e reutilizar código comum entre elas. Além disso, o polimorfismo permite que você escreva código mais genérico e flexível, que pode lidar com diferentes tipos de despesas de maneira uniforme.
