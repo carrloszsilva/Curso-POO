@@ -285,17 +285,29 @@ public class SistemaDespesa {
  //novo objeto do tipo despesa que sera armazenado no ArrayList Despesa
    
  public static void entrarDespesa() {
+
         // Implementação do método de entrar despesa
+
         System.out.println("Entrar despesa");
+
         System.out.print("Valor: ");
+
         double valor = scanner.nextDouble();
+
         scanner.nextLine();
+
         System.out.print("Data de vencimento (dd/MM/yyyy): ");
+
         String dataDeVencimentoStr = scanner.nextLine();
+
         Date dataDeVencimento = Util.parseDate(dataDeVencimentoStr);
+
         System.out.print("Categoria: ");
+
         String categoria = scanner.nextLine();
+
         TipoDeDespesa tipoDeDespesa = getTipoDeDespesa(categoria);
+        
         if (tipoDeDespesa == null) {
             tipoDeDespesa = new TipoDeDespesa(categoria);
             tiposDeDespesa.add(tipoDeDespesa);
