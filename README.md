@@ -133,9 +133,9 @@ despesas.add(new DespesaAlimentacao(50.0, "25/08/2023", "Jantar", "Pavan"));
 
 despesas.add(new DespesaTransporte(10.0, "20/08/2023", "TCCC", "Ônibus"));
 
-## Código em Linguagem Java - Sistema de Despesas.
+# Código em Linguagem Java - Sistema de Despesas.
 
-# Analise das classes e metodos. 
+## Analise das classes e metodos. 
 Será apresentado a explicação de dos blocos do código.
 
 //classes importadas 
