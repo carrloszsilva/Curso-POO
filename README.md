@@ -430,8 +430,9 @@ private static TipoDeDespesa getTipoDeDespesa(int idDoTipoDeDespensa) {
         }
     }
 ///////////////////////////////////////////////////////////////////////////////////////////////
+
 private static void excluirTipoDeDespensa() {
-    
+
     System.out.println("Excluir tipo de despensa");
     listarTiposDeDespesa();
     System.out.print("ID do tipo de despensa: ");
@@ -443,3 +444,86 @@ private static void excluirTipoDeDespensa() {
     }
     tiposDeDespesa.remove(tipoDeDespesa);
 }  
+
+//////////////////////////////////////////////////////////////////////// ///////////////   
+
+    public static void gerenciarUsuarios() {
+
+        // Implementação do método de gerenciar usuários
+        System.out.println("Gerenciar usuários");
+         boolean voltar = false;
+        while (!voltar) {
+            System.out.println("Gerenciar usuários");
+            System.out.println("1. Cadastrar usuário");
+            System.out.println("2. Editar usuário");
+            System.out.println("3. Listar usuários");
+            System.out.println("4. Voltar ao menu principal");
+            int opcao = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcao) {
+
+                case 1:
+                    cadastrarUsuario();
+                    break;
+                case 2:
+                    editarUsuario();
+                    break;
+                case 3:
+                    listarUsuarios();
+                    break;
+                case 4:
+                    voltar = true;
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }
+    }
+/////////////////////////////////////////////////////////////////////////////////////// 
+
+private static void cadastrarUsuario() {
+        System.out.println("Cadastrar usuário");
+        System.out.print("Login: ");
+        String login = scanner.nextLine();
+        Usuario usuarioExistente = getUsuario(login);
+        if (usuarioExistente != null) {
+            System.out.println("Já existe um usuário com este login!");
+            return;
+        }
+        System.out.print("Senha: ");
+        String senha = scanner.nextLine();
+        String senhaCriptografada = Util.criptografar(senha);
+        Usuario usuario = new Usuario(login, senhaCriptografada);
+        usuarios.add(usuario);
+    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+    private static Usuario getUsuario(String login) {
+
+        return null;
+    }
+
+    private static void editarUsuario() {
+
+        System.out.println("Editar usuário");
+        listarUsuarios();
+        System.out.print("ID do usuário: ");
+        int idDoUsuario = scanner.nextInt();
+        scanner.nextLine();
+        Usuario usuario = getUsuario(idDoUsuario);
+        if (usuario == null) {
+            System.out.println("ID do usuário inválido!");
+            return;
+        }
+    }
+System.out.print ("Novo login:");
+private static Usuario getUsuario(int idDoUsuario) {
+
+        return null;
+    }
+String novoLogin = scanner.nextLine ();
+Usuario usuarioExistente = getUsuario;
+
+}
