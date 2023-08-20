@@ -483,6 +483,7 @@ private static void excluirTipoDeDespensa() {
 /////////////////////////////////////////////////////////////////////////////////////// 
 
 private static void cadastrarUsuario() {
+    
         System.out.println("Cadastrar usuário");
         System.out.print("Login: ");
         String login = scanner.nextLine();
