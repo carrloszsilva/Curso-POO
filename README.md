@@ -88,7 +88,9 @@ public class Despesa {
 }
 
 // classe filha utilizando o conceito de herança e polimorfismo
+
 // Esta classe terá um comportamento diferente pois tem 
+
 // o atributo restaurante, além de herdar os demais da classe mãe.
 
 public class DespesaAlimentacao extends Despesa {
@@ -105,7 +107,9 @@ public class DespesaAlimentacao extends Despesa {
 }
 
 // classe filha utilizando o conceito de herança e polimorfismo
+
 // Esta classe terá um comportamento diferente pois tem 
+
 // o atributo meioDeTransporte, além de herdar os demais da classe mãe.
 
 public class DespesaTransporte extends Despesa {
@@ -234,7 +238,7 @@ public class SistemaDespesa {
     //O programa começa criando um objeto Scanner para receber as entradas do usuário. Em seguida, há 
 
     //um loop while que continuará sendo executado até que a variável "sair" seja definida como "true".
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean sair = false;
@@ -275,3 +279,78 @@ public class SistemaDespesa {
             }
         }
     }
+
+ //criado os metodos para gerenciar as despesas - Ao entrar com um nova despesa, será criado um
+
+ //novo objeto do tipo despesa que sera armazenado no ArrayList Despesa
+   
+ public static void entrarDespesa() {
+        // Implementação do método de entrar despesa
+        System.out.println("Entrar despesa");
+        System.out.print("Valor: ");
+        double valor = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.print("Data de vencimento (dd/MM/yyyy): ");
+        String dataDeVencimentoStr = scanner.nextLine();
+        Date dataDeVencimento = Util.parseDate(dataDeVencimentoStr);
+        System.out.print("Categoria: ");
+        String categoria = scanner.nextLine();
+        TipoDeDespesa tipoDeDespesa = getTipoDeDespesa(categoria);
+        if (tipoDeDespesa == null) {
+            tipoDeDespesa = new TipoDeDespesa(categoria);
+            tiposDeDespesa.add(tipoDeDespesa);
+        }
+        Despesa despesa = new Despesa(valor, dataDeVencimento, tipoDeDespesa);
+        despesas.add(despesa);
+    }
+private static TipoDeDespesa getTipoDeDespesa(String categoria) {
+        return null;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+    public static void anotarPagamento() {
+        // Implementação do método de anotar pagamento
+        System.out.println("Anotar pagamento");
+         listarDespesasEmAberto();
+        System.out.print("ID da despesa: ");
+        int idDaDespesa = scanner.nextInt();
+        Despesa despesa = getDespesa(idDaDespesa);
+        if (despesa == null) {
+            System.out.println("ID da despesa inválido!");
+            return;
+        }
+        System.out.print("Valor do pagamento: ");
+        double valorDoPagamento = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.print("Data do pagamento (dd/MM/yyyy): ");
+        String dataDoPagamentoStr = scanner.nextLine();
+        Date dataDoPagamento = Util.parseDate(dataDoPagamentoStr);
+        Pagamento pagamento = new Pagamento(valorDoPagamento, dataDoPagamento);
+        despesa.anotarPagamento(pagamento);
+    }
+private static Despesa getDespesa(int idDaDespesa) {
+        return null;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////
+    public static void listarDespesasEmAberto() {
+        // Implementação do método de listar despesas em aberto
+        System.out.println("Listar despesas em aberto");
+          Despesa[] despendings;
+        for (Despesa despesa : despendings) {
+            if (!despesas.isPaga()) {
+                System.out.println(despendings);
+            }
+        }
+    }
+//////////////////////////////////////////////////////////////////////////////////
+    public static void listarDespesasPagas() {
+        // Implementação do método de listar despesas pagas
+        System.out.println("Listar despesas pagas");
+           for (Despesa despensa : despesas) {
+            if (despensa.isPaga()) {
+                System.out.println(despesas);
+            }
+        }
+    }
+///////////////////////////////////////////////////////////////////////////////////
