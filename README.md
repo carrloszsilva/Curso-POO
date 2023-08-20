@@ -52,7 +52,7 @@ O polimorfismo permite que você use um único tipo de variável para armazenar 
 
 Esses conceitos podem ajudar a tornar o código mais limpo, organizado e fácil de entender, pois permitem que criar uma estrutura clara para representar as diferentes entidades do sistema e reutilizar código comum entre elas. Além disso, o polimorfismo permite que você escreva código mais genérico e flexível, que pode lidar com diferentes tipos de despesas de maneira uniforme.
 
-# Código que utilizando Herança / Polimorfismo.
+# Código utilizando Herança / Polimorfismo.
 
 // Classe despesas com atributos privados
 
@@ -88,6 +88,8 @@ public class Despesa {
 }
 
 // classe filha utilizando o conceito de herança e polimorfismo
+// Esta classe terá um comportamento diferente pois tem 
+// o atributo restaurante, além de herdar os demais da classe mãe.
 
 public class DespesaAlimentacao extends Despesa {
     private String restaurante;
@@ -103,6 +105,8 @@ public class DespesaAlimentacao extends Despesa {
 }
 
 // classe filha utilizando o conceito de herança e polimorfismo
+// Esta classe terá um comportamento diferente pois tem 
+// o atributo meioDeTransporte, além de herdar os demais da classe mãe.
 
 public class DespesaTransporte extends Despesa {
     private String meioDeTransporte;
@@ -122,4 +126,90 @@ public class DespesaTransporte extends Despesa {
 List<Despesa> despesas = new ArrayList<>();
 
 despesas.add(new DespesaAlimentacao(50.0, "25/08/2023", "Jantar", "Pavan"));
+
 despesas.add(new DespesaTransporte(10.0, "20/08/2023", "TCCC", "Ônibus"));
+
+## Código em Linguagem Java - Sistema de Despesas.
+
+# Analise das classes e metodos. 
+Será apresentado a explicação de dos blocos do código.
+
+//classes importadas 
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+
+//a classe possui uma lista despesa, tipoDespesa e usúario do tipo list que serão inializados no 
+//costrutor da classe. A classe também possui um objeto chamado scanner, do tipo Scanner, que é 
+//utilizado para fazer a leitura de dados do usuário a partir do teclado. Esse objeto é inicializado
+//como um novo Scanner(System.in) no construtor da classe.
+
+public class SistemaDespesa {
+    private static final Usuario getUsuario = null;
+    private static List<Despesa> despesas;
+    private static List<TipoDeDespesa> tiposDeDespesa;
+    private static List<Usuario> usuarios;
+    private static Scanner scanner;
+
+
+
+Scanner(System.in) no construtor da classe.
+    public SistemaDespesa() {
+        despesas = new ArrayList<>();
+        tiposDeDespesa = new ArrayList<>();
+        usuarios = new ArrayList<>();
+        scanner = new Scanner(System.in);
+    }
+
+    public List<Despesa> getDespesas() {
+        return despesas;
+    }
+
+    public List<TipoDeDespesa> getTiposDeDespesa() {
+        return tiposDeDespesa;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void adicionarDespesa(Despesa despesa) {
+        despesas.add(despesa);
+    }
+
+    public void removerDespesa(Despesa despesa) {
+        despesas.remove(despesa);
+    }
+
+    public void listarDespesas() {
+        for (Despesa despesa : despesas) {
+            System.out.println(despesa);
+        }
+    }
+
+    public void adicionarTipoDeDespesa(TipoDeDespesa tipoDeDespesa) {
+        tiposDeDespesa.add(tipoDeDespesa);
+    }
+
+    public void removerTipoDeDespesa(TipoDeDespesa tipoDeDespesa) {
+        tiposDeDespesa.remove(tipoDeDespesa);
+    }
+
+  
+    public void adicionarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+    }
+
+    public void removerUsuario(Usuario usuario) {
+        usuarios.remove(usuario);
+    }
+
+    public static void listarUsuarios() {
+        for (Usuario usuario : usuarios) {
+            System.out.println(usuario);
+        }
+    }
+    
+
