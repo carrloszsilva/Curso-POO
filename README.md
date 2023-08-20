@@ -168,11 +168,8 @@ public class SistemaDespesa {
     public SistemaDespesa() {
 
         despesas = new ArrayList<>();
-
         tiposDeDespesa = new ArrayList<>();
-
         usuarios = new ArrayList<>();
-
         scanner = new Scanner(System.in);
     }
 
@@ -356,3 +353,93 @@ private static Despesa getDespesa(int idDaDespesa) {
         }
     }
 ///////////////////////////////////////////////////////////////////////////////////
+
+public static void gerenciarTiposDeDespesa() {
+
+        // Implementação do método de gerenciar tipos de despesa
+        System.out.println("Gerenciar tipos de despesa");
+          boolean voltar = false;
+        while (!voltar) {
+            System.out.println("Gerenciar tipos de despensa");
+            System.out.println("1. Criar tipo de despensa");
+            System.out.println("2. Editar tipo de despensa");
+            System.out.println("3. Listar tipos de despensa");
+            System.out.println("4. Excluir tipo de despensa");
+            System.out.println("5. Voltar ao menu principal");
+            int opcao = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcao) {
+                case 1:
+                    criarTipoDeDespensa();
+                    break;
+                case 2:
+                    editarTipoDeDespensa();
+                    break;
+                case 3:
+                    listarTiposDeDespesa();
+                    break;
+                case 4:
+                    excluirTipoDeDespensa();
+                    break;
+                case 5:
+                    voltar = true;
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }
+    }
+///////////////////////////////////////////////////////////////////////////////////////   
+
+ private static void criarTipoDeDespensa() {
+
+        System.out.println("Criar tipo de despensa");
+        System.out.print("Nome: ");
+        String nome = scanner.nextLine();
+        TipoDeDespesa tipoDeDespensa = new TipoDeDespesa(nome);
+        tiposDeDespesa.add(tipoDeDespensa);
+    }
+////////////////////////////////////////////////////////////////////////////////////////
+    private static void editarTipoDeDespensa() {
+
+        System.out.println("Editar tipo de despensa");
+        listarTiposDeDespesa();
+        System.out.print("ID do tipo de despensa: ");
+        int idDoTipoDeDespensa = scanner.nextInt();
+        scanner.nextLine();
+        TipoDeDespesa tipoDeDespensa = getTipoDeDespesa(idDoTipoDeDespensa);
+        if (tipoDeDespensa == null) {
+            System.out.println("ID do tipo de despensa inválido!");
+            return;
+        }
+        System.out.print("Novo nome: ");
+        String novoNome = scanner.nextLine();
+        tipoDeDespensa.setNome(novoNome);
+    }
+private static TipoDeDespesa getTipoDeDespesa(int idDoTipoDeDespensa) {
+        return null;
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    private static void listarTiposDeDespesa() {
+
+        System.out.println("Listar tipos de despensa");
+        for (TipoDeDespesa tipoDeDespensa : tiposDeDespesa) {
+            System.out.println(tipoDeDespensa);
+        }
+    }
+///////////////////////////////////////////////////////////////////////////////////////////////
+private static void excluirTipoDeDespensa() {
+    
+    System.out.println("Excluir tipo de despensa");
+    listarTiposDeDespesa();
+    System.out.print("ID do tipo de despensa: ");
+    int idDoTipoDeDespensa = scanner.nextInt();
+    TipoDeDespesa tipoDeDespesa = getTipoDeDespesa(idDoTipoDeDespensa);
+    if (tipoDeDespesa == null) {
+        System.out.println("ID do tipo de despesa inválido!");
+        return;
+    }
+    tiposDeDespesa.remove(tipoDeDespesa);
+}  
