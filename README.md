@@ -307,7 +307,7 @@ public class SistemaDespesa {
         String categoria = scanner.nextLine();
 
         TipoDeDespesa tipoDeDespesa = getTipoDeDespesa(categoria);
-        
+
         if (tipoDeDespesa == null) {
             tipoDeDespesa = new TipoDeDespesa(categoria);
             tiposDeDespesa.add(tipoDeDespesa);
@@ -356,7 +356,9 @@ private static Despesa getDespesa(int idDaDespesa) {
         }
     }
 //////////////////////////////////////////////////////////////////////////////////
+
     public static void listarDespesasPagas() {
+        
         // Implementação do método de listar despesas pagas
         System.out.println("Listar despesas pagas");
            for (Despesa despensa : despesas) {
