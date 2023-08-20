@@ -9,20 +9,17 @@ Este documento apresenta o sistema de controle de despesas que foi desenvolvido 
 O sistema possui diversas funcionalidades para ajudar no gerenciamento das despesas, incluindo:
 
 **Entradas:** O sistema permite o cadastro de despesas por categorias, facilitando a organização e o controle das mesmas.
-
 **Gerenciamento:** É possível gerenciar as despesas pagas e em aberto, garantindo que todas as contas sejam pagas em dia.
-
 **Relatórios:** O sistema possui um menu onde é possível acessar relatórios com a quantidade total de despesas, permitindo
  uma visão geral dos gastos.
-
 **Cadastro de usuários:** O sistema possui um submenu para cadastro e gerenciamento de usuários, com login e senha. É possível definir diferentes níveis de acesso para os usúarios do sistema.
 
 ## Protótipo de tela.
-Sugestão de protótipo de tela para o sistema:
+`Sugestão de protótipo para o Sistema de Despesas`
 
 O protótipo de tela para o sistema de controle de despesas pode ter um design limpo e moderno, com cores suaves e fontes legíveis. Na parte superior da tela, pode haver um menu com opções para acessar as diferentes funcionalidades do sistema, como entradas, gerenciamento de despesas e relatórios. Abaixo do menu, pode haver uma área para exibir informações sobre as despesas cadastradas, como a data, a categoria e o valor. Também pode haver opções para filtrar as despesas por data ou categoria. Na parte inferior da tela, pode haver um gráfico mostrando a evolução das despesas ao longo do tempo.
 
-## Gerencimento de relatórios.
+## Gerenciamento de relatórios.
 
 Para acessar os relatórios no sistema de controle de despesas, você pode seguir os seguintes passos:
 
@@ -136,7 +133,7 @@ despesas.add(new DespesaTransporte(10.0, "20/08/2023", "TCCC", "Ônibus"));
 # Código em Linguagem Java - Sistema de Despesas.
 
 ## Analise das classes e metodos. 
-### Será apresentado a explicação de dos blocos do código.
+### Será apresentado a implementação e explicação do código.
 
 //classes importadas 
 
@@ -531,7 +528,7 @@ Usuario usuarioExistente = getUsuario;
 
 }
 
-## Conciderações Finas - POO.
+## Considerações Finas - POO.
 
 A Programação Orientada a Objetos (POO) é um padrão de desenvolvimento de software amplamente utilizado em muitas linguagens de programação atuais, como Java, C#, PHP, Python, C++, entre outras. A POO permite que você representar melhor o mundo real em seus programas, tornando-os mais fáceis de ler e entender. Além disso, pode ser mais rápido programar com POO e é mais fácil criar grandes programas. Os programas POO também são mais fáceis de modificar e manter. A POO traz grandes benefícios aos setores de tecnologia da informação das empresas na construção de seus sistemas e softwares ou hardwares. A orientação a objetos confere aos sistemas maior clareza, distribuição mais adequada de responsabilidades, encapsulamento de atributos e comportamentos, dentre muitas outras características. Isso torna o código mais seguro e confiável. No entanto, é importante notar que a programação orientada a objetos pode apresentar desafios e não basta apenas conhecer sua estrutura e conceitos para resolvê-los, é preciso dominá-los. Além disso, pode haver situações em que aplicar a POO pode não ser a melhor opção. É importante avaliar cuidadosamente cada caso para determinar se a POO é a abordagem mais adequada.
 
