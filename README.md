@@ -289,21 +289,13 @@ public class SistemaDespesa {
         // Implementação do método de entrar despesa
 
         System.out.println("Entrar despesa");
-
         System.out.print("Valor: ");
-
         double valor = scanner.nextDouble();
-
         scanner.nextLine();
-
         System.out.print("Data de vencimento (dd/MM/yyyy): ");
-
         String dataDeVencimentoStr = scanner.nextLine();
-
         Date dataDeVencimento = Util.parseDate(dataDeVencimentoStr);
-
         System.out.print("Categoria: ");
-
         String categoria = scanner.nextLine();
 
         TipoDeDespesa tipoDeDespesa = getTipoDeDespesa(categoria);
@@ -358,7 +350,7 @@ private static Despesa getDespesa(int idDaDespesa) {
 //////////////////////////////////////////////////////////////////////////////////
 
     public static void listarDespesasPagas() {
-        
+
         // Implementação do método de listar despesas pagas
         System.out.println("Listar despesas pagas");
            for (Despesa despensa : despesas) {
