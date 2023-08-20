@@ -159,13 +159,9 @@ import java.util.Scanner;
 public class SistemaDespesa {
 
     private static final Usuario getUsuario = null;
-
     private static List<Despesa> despesas;
-
     private static List<TipoDeDespesa> tiposDeDespesa;
-
     private static List<Usuario> usuarios;
-
     private static Scanner scanner;
 
 
