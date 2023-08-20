@@ -51,3 +51,70 @@ Herança e polimorfismo são conceitos importantes da programação orientada a 
 O polimorfismo permite que você use um único tipo de variável para armazenar objetos de diferentes classes relacionadas por herança. Isso significa que você pode ter uma lista de despesas do tipo `List<Despesa>` que pode armazenar objetos das classes `DespesaAlimentacao`, `DespesaTransporte` e `DespesaMoradia`. Quando você percorre a lista, pode chamar métodos comuns a todas as despesas, como `getValor()` ou `getData()`, sem se preocupar com o tipo específico de cada despesa.
 
 Esses conceitos podem ajudar a tornar o código mais limpo, organizado e fácil de entender, pois permitem que criar uma estrutura clara para representar as diferentes entidades do sistema e reutilizar código comum entre elas. Além disso, o polimorfismo permite que você escreva código mais genérico e flexível, que pode lidar com diferentes tipos de despesas de maneira uniforme.
+
+# Exemplo de Código que utiliza os Conceitos de Herança e Polimorfismo.
+
+// Classe despesas com atributos privados
+public class Despesa {
+    private double valor;
+    private String data;
+    private String descricao;
+
+	// Metodo de sobreescrita do metodo construtor
+    public Despesa(double valor, String data, String descricao) {
+        this.valor = valor;
+        this.data = data;
+        this.descricao = descricao;
+    }
+
+       // Metodo de sobrecarga. Possui somente os atributos valor e descrição
+    public Despesa(double valor, String descricao) {
+        this.valor = valor;
+        this.descricao = descricao;
+
+
+    public double getValor() {
+        return valor;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+}
+
+// classe filha utilizando o conceito de herança e polimorfismo
+public class DespesaAlimentacao extends Despesa {
+    private String restaurante;
+
+    public DespesaAlimentacao(double valor, String data, String descricao, String restaurante) {
+        super(valor, data, descricao);
+        this.restaurante = restaurante;
+    }
+
+    public String getRestaurante() {
+        return restaurante;
+    }
+}
+
+// classe filha utilizando o conceito de herança e polimorfismo
+public class DespesaTransporte extends Despesa {
+    private String meioDeTransporte;
+
+    public DespesaTransporte(double valor, String data, String descricao, String meioDeTransporte) {
+        super(valor, data, descricao);
+        this.meioDeTransporte = meioDeTransporte;
+    }
+
+    public String getMeioDeTransporte() {
+        return meioDeTransporte;
+    }
+}
+
+// Exemplo de uso
+List<Despesa> despesas = new ArrayList<>();
+despesas.add(new DespesaAlimentacao(50.0, "25/08/2023", "Jantar", "Pavan"));
+despesas.add(new DespesaTransporte(10.0, "20/08/2023", "TCCC", "Ônibus"));
