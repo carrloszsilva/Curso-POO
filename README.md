@@ -52,7 +52,7 @@ O polimorfismo permite que você use um único tipo de variável para armazenar 
 
 Esses conceitos podem ajudar a tornar o código mais limpo, organizado e fácil de entender, pois permitem que criar uma estrutura clara para representar as diferentes entidades do sistema e reutilizar código comum entre elas. Além disso, o polimorfismo permite que você escreva código mais genérico e flexível, que pode lidar com diferentes tipos de despesas de maneira uniforme.
 
-# Exemplo de Código que utilizando Herança / Polimorfismo.
+# Código que utilizando Herança / Polimorfismo.
 
 // Classe despesas com atributos privados
 
@@ -120,5 +120,6 @@ public class DespesaTransporte extends Despesa {
 ### Exemplo de uso
 
 List<Despesa> despesas = new ArrayList<>();
+
 despesas.add(new DespesaAlimentacao(50.0, "25/08/2023", "Jantar", "Pavan"));
 despesas.add(new DespesaTransporte(10.0, "20/08/2023", "TCCC", "Ônibus"));
