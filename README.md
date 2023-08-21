@@ -1,11 +1,11 @@
 # Curso-POO - Sistema para controle de Despesas.
 
-## Elaboração de documento para Cliente.
+## Elaboração de documentação.
 
 ## Introdução.
 Este documento apresenta o sistema de controle de despesas que foi desenvolvido para ajudar a gerenciar e controlar as despesas de forma eficiente. O sistema é fácil de usar e foi projetado para ser intuitivo, mesmo para aqueles que não têm experiência com esse tipo de software.
 
-## Funcionalidades
+## Funcionalidades.
 O sistema possui diversas funcionalidades para ajudar no gerenciamento das despesas, incluindo:
 
 **Entradas:** O sistema permite o cadastro de despesas por categorias, facilitando a organização e o controle das mesmas.
