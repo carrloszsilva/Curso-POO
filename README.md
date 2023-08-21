@@ -459,7 +459,8 @@ private static void excluirTipoDeDespensa() {
     public static void gerenciarUsuarios() {
 
         // Implementação do método de gerenciar usuários, o laço de repetição while percorre 
-        //o submenu para cadastro, ediçaoe listar usuário até a opção 4 ser selecionada e voltar ao menu principal
+        //o submenu para cadastro, ediçaoe listar usuário até a opção 4 ser selecionada
+        // e voltar ao menu principal
 
         System.out.println("Gerenciar usuários");
          boolean voltar = false;
@@ -495,7 +496,7 @@ private static void excluirTipoDeDespensa() {
 
 private static void cadastrarUsuario() {
 
-        
+
         System.out.println("Cadastrar usuário");
         System.out.print("Login: ");
         String login = scanner.nextLine();
