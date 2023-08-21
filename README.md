@@ -170,6 +170,8 @@ public class SistemaDespesa {
         scanner = new Scanner(System.in);
     }
 
+    //métodos para obter, adicionar, remover e listar objetos. 
+
     public List<Despesa> getDespesas() {
         return despesas;
     }
@@ -304,6 +306,7 @@ private static TipoDeDespesa getTipoDeDespesa(String categoria) {
     ///////////////////////////////////////////////////////////////////////////////////////
     public static void anotarPagamento() {
         // Implementação do método de anotar pagamento
+
         System.out.println("Anotar pagamento");
          listarDespesasEmAberto();
         System.out.print("ID da despesa: ");
@@ -329,6 +332,7 @@ private static Despesa getDespesa(int idDaDespesa) {
     ////////////////////////////////////////////////////////////////////////////////////
     public static void listarDespesasEmAberto() {
         // Implementação do método de listar despesas em aberto
+
         System.out.println("Listar despesas em aberto");
           Despesa[] despendings;
         for (Despesa despesa : despendings) {
@@ -342,6 +346,7 @@ private static Despesa getDespesa(int idDaDespesa) {
     public static void listarDespesasPagas() {
 
         // Implementação do método de listar despesas pagas
+
         System.out.println("Listar despesas pagas");
            for (Despesa despensa : despesas) {
             if (despensa.isPaga()) {
@@ -353,7 +358,10 @@ private static Despesa getDespesa(int idDaDespesa) {
 
 public static void gerenciarTiposDeDespesa() {
 
-        // Implementação do método de gerenciar tipos de despesa
+        // Implementação do método de gerenciar tipos de despesa, ao escolher uma opção do switch case
+        
+        //será chamado um metodo especifico a ser executado pelo sistena
+
         System.out.println("Gerenciar tipos de despesa");
           boolean voltar = false;
         while (!voltar) {
@@ -390,6 +398,7 @@ public static void gerenciarTiposDeDespesa() {
 ///////////////////////////////////////////////////////////////////////////////////////   
 
  private static void criarTipoDeDespensa() {
+         // cria um obejto tipo de despesa do tipo Despesa que é adicionado no ArryList
 
         System.out.println("Criar tipo de despensa");
         System.out.print("Nome: ");
@@ -399,6 +408,7 @@ public static void gerenciarTiposDeDespesa() {
     }
 ////////////////////////////////////////////////////////////////////////////////////////
     private static void editarTipoDeDespensa() {
+        //esse metodo chama a edição de um tipo de despesa já existe.
 
         System.out.println("Editar tipo de despensa");
         listarTiposDeDespesa();
@@ -420,6 +430,7 @@ private static TipoDeDespesa getTipoDeDespesa(int idDoTipoDeDespensa) {
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     private static void listarTiposDeDespesa() {
+        // percorre o ArrayLit para lista as tipos de despesas
 
         System.out.println("Listar tipos de despensa");
         for (TipoDeDespesa tipoDeDespensa : tiposDeDespesa) {
@@ -429,6 +440,7 @@ private static TipoDeDespesa getTipoDeDespesa(int idDoTipoDeDespensa) {
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 private static void excluirTipoDeDespensa() {
+    // chama o metodo para exlcuir um tipo de despesa.
 
     System.out.println("Excluir tipo de despensa");
     listarTiposDeDespesa();
@@ -446,7 +458,9 @@ private static void excluirTipoDeDespensa() {
 
     public static void gerenciarUsuarios() {
 
-        // Implementação do método de gerenciar usuários
+        // Implementação do método de gerenciar usuários, o laço de repetição while percorre 
+        //o submenu para cadastro, ediçaoe listar usuário até a opção 4 ser selecionada e voltar ao menu principal
+
         System.out.println("Gerenciar usuários");
          boolean voltar = false;
         while (!voltar) {
@@ -481,6 +495,7 @@ private static void excluirTipoDeDespensa() {
 
 private static void cadastrarUsuario() {
 
+        
         System.out.println("Cadastrar usuário");
         System.out.print("Login: ");
         String login = scanner.nextLine();
