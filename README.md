@@ -43,21 +43,32 @@ Esse menu pode ser criado usanto uma condição para ser executado equanto a con
 for acionada.
 * Cada opção terá um metodo para cadastrar uma despesa, listar a despesas por tipo, pagas, em aberto
 
-De acordo com as informações que se pede podemos definir:
+## Classe
+Uma classe **Despesa**.
 
-Uma classe *Despesa*
 Essa classe terá atributos como valor, data e descrição. Na classe principal do sistema (por exemplo, Main) implemetar um método para cadastrar novas despesas. Esse método deve solicitar ao usuário os dados da despesa (valor, data, descrição, etc.) e criar um novo objeto da classe Despesa com essas informações.
 
-Um metodo de sobreescrita para que o usúario possa entrar com os dados de cada despesa.
+*Um metodo de sobreescrita para que o usúario possa entrar com os dados de cada despesa.*
 
 Para armazenar as Despesas pode-se criar uma lista (por exemplo, ArrayList) para armazenar os objetos Despesa. Criar um atributo na classe Main do tipo lista, e sempre que uma nova despesa for cadastrada, adicione-a a essa lista
 
-Importante encapsular os atributos valor - *Imutabilidade* quando um atributo é encapsulado como valor, ele não pode ser alterado diretamente, o que garante que o valor seja imutável. Isso evita erros causados por modificações acidentais.
-
+## Encapsulamento
+É recomedavél encapsular os atributos valor - *Imutabilidade* quando um atributo é encapsulado como valor, ele não pode ser alterado diretamente, o que garante que o valor seja imutável. Isso evita erros causados por modificações acidentais.
 Para manipular um atributo encapsulado em uma classe, é necessário definir métodos de acesso, também conhecidos como getters e setters. Pode-se controlar o acesso e a manipulação do atributo na classe, garantindo uma melhor organização e segurança do código.
 
-*Classes filhas* da classe Despesa para criar tipos (categorias) de despesas como
-DespesaAlimentação - DespesaTransporte. As classes filhas herdam os métodos e atributos da classe mãe. Elas podem usar e executar os métodos da classe mãe, bem como acessar e modificar os atributos da classe mãe. Além disso, as classes filhas também podem adicionar métodos e atributos adicionais específicos a elas.
+## Herança
+**Classes filhas** da classe Despesa pode-se criar tipos (categorias) de despesas como
+**DespesaAlimentação** - **DespesaTransporte**. As classes filhas herdam os métodos e atributos da classe mãe. Elas podem usar e executar os métodos da classe mãe, bem como acessar e modificar os atributos da classe mãe. Além disso, as classes filhas também podem adicionar métodos e atributos adicionais específicos a elas.
+
+## Gerenciar Despesas.
+Para gerenciar as despesas criar uma classe principal que contenha uma lista de todas as despesas criadas. Pode-se criar uma Lita do tipo ArrayList para armazenar os objetos Despesas. Nessa classe principal terá métodos para adicionar, editar, alterar ou excluir uma despesa 
+No GerenciadorDespesa(){
+
+    Pode-se criar um menu de opções para executar o metodo desejado.
+    
+}
+
+
 
 
 
