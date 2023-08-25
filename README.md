@@ -38,7 +38,7 @@ Para fazer isso, você pode seguir os seguintes passos:
 4. Clique no botão "Exportar" e selecione a opção "txt" no menu suspenso.
 5. Escolha um local para salvar o arquivo txt e clique em "Salvar".
 
-# Definição de requisitos
+## Definição de requisitos
 
 *O programa contará com um menu de opções para que o usuário possa escolher o que será executado.
 Esse menu pode ser criado usanto uma condição que será executada equanto a condição de saida não 
@@ -78,6 +78,12 @@ Para um usuário com privilegios além da senha será solicitado o cpf na hora d
 Apenas usuários com privilegios podem cadastrar e exluir novos usúarios e excluir Despesas.
 
 Deve conter um metodo de sobreecrita com o mesmo nome da Classe para que seja possivel entrar com os dados ao criar os novos objetos Usúario. As **senhas** devem ser criptografadas e conter uma regra - **Senhas** devem ter letras maisculas e minusculas, números, ao menos um elemento especial # * ; e no mínimo 10 caracteres. Ao digitar a senha incorreta por 3 vezes o usário será bloqueado. Este deve ir na opção esqueceu senha e informar seu dados, nome, e-mail e cpf. Uma link para redefinição de senha será enviado para o e-mail cadatrado. A nova senha não pode ser igual a anterior.
+
+## Exportando relátorios
+Para gerar um relatório de Despesas criar um metodo que receba como parametro a lista de Despesas 
+cadastradas. Deve conter uma variavel para receber o relatório. Percorrer a lista de Despesa add as informaçoes para o gerar o relatório, mome, categoria ou data. Especifique o caminho e o nome do arquivo onde o relatório será salvo. Por exemplo, você pode usar o caminho absoluto da pasta + o nome do arquivo (ex: "/caminho/para/pasta/relatorio_despesas.txt").
+
+Certifique-se de fechar o arquivo após salvar o relatório usando o método close.
 
 
 ## Considerações Finas - POO.
