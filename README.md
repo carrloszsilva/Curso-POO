@@ -75,9 +75,9 @@ Para criar um usúario do sistema - definir nome do usuário e uma senha.
 Existi um usuário que tem privilegios - Portanto deve-se criar uma classe Usuário mãe.
 Nesta classe mãe terá os atributos nome, senha e um e-mail. 
 Para um usuário com privilegios além da senha será solicitado o cpf na hora de logar no sistema
-Apenas usuários com privilegios podem cadastrar e exluir novos usúarios e excluir Despesas.
+Apenas usuários com privilegios podem cadastrar e exlcuir novos usúarios e excluir Despesas.
 
-Deve conter um metodo de sobreecrita com o mesmo nome da Classe para que seja possivel entrar com os dados ao criar os novos objetos Usúario. As **senhas** devem ser criptografadas e conter uma regra - **Senhas** devem ter letras maisculas e minusculas, números, ao menos um elemento especial # * ; e no mínimo 10 caracteres. Ao digitar a senha incorreta por 3 vezes o usário será bloqueado. Este deve ir na opção esqueceu senha e informar seu dados, nome, e-mail e cpf. Uma link para redefinição de senha será enviado para o e-mail cadatrado. A nova senha não pode ser igual a anterior.
+Deve conter um metodo de sobreecrita com o mesmo nome da Classe para que seja possível entrar com os dados ao criar os novos objetos Usúario. As **senhas** devem ser criptografadas e conter uma regra - **Senhas** devem ter letras maisculas e minusculas, números, ao menos um elemento especial # * ; e no mínimo 10 caracteres. Ao digitar a senha incorreta por 3 vezes o usário será bloqueado. Este deve ir na opção esqueceu senha e informar seu dados, nome, e-mail e cpf. Um ink para redefinição de senha será enviado para o e-mail cadatrado. A nova senha não pode ser igual a anterior.
 
 ## Exportando relátorios
 Para gerar um relatório de Despesas criar um metodo que receba como parametro a lista de Despesas 
