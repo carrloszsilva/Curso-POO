@@ -1,4 +1,4 @@
-# Curso-POO - Sistema para controle de Despesas.
+# Sistema para controle de Despesas.
 
 ## Elaboração de documentação.
 
@@ -8,9 +8,11 @@ Este documento apresenta o sistema de controle de despesas que foi desenvolvido 
 ## Funcionalidades.
 
 **Entradas:** O sistema permite o cadastro de despesas por categorias, facilitando a organização e o controle das mesmas.
+
 **Gerenciamento:** É possível gerenciar as despesas pagas e em aberto, garantindo que todas as contas sejam pagas em dia.
-**Relatórios:** O sistema possui um menu onde é possível acessar relatórios com a quantidade total de despesas, permitindo
- uma visão geral dos gastos.
+
+**Relatórios:** O sistema possui um menu onde é possível acessar relatórios com a quantidade total de despesas, permitindo uma visão geral dos gastos.
+
 **Cadastro de usuários:** O sistema possui um submenu para cadastro e gerenciamento de usuários, com login e senha. É possível definir diferentes níveis de acesso para os usúarios do sistema.
 
 `Sugestão de protótipo para o Sistema`
@@ -38,23 +40,22 @@ Para fazer isso, você pode seguir os seguintes passos:
 
 # Definição de requisitos
 
-*O programa precisa de um menu de opções para que o usuário possa escolher o que será executado.
-Esse menu pode ser criado usanto uma condição para ser executado equanto a condição de saida não 
+*O programa contará com um menu de opções para que o usuário possa escolher o que será executado.
+Esse menu pode ser criado usanto uma condição que será executada equanto a condição de saida não 
 for acionada.
 * Cada opção terá um metodo para cadastrar uma despesa, listar a despesas por tipo, pagas, em aberto
 
 ## Classe
 Uma classe **Despesa**.
 
-Essa classe terá atributos como valor, data e descrição. Na classe principal do sistema (por exemplo, Main) implemetar um método para cadastrar novas despesas. Esse método deve solicitar ao usuário os dados da despesa (valor, data, descrição, etc.) e criar um novo objeto da classe Despesa com essas informações.
+Essa classe terá atributos como valor, data e descrição e seu metodos. Na classe principal do sistema (por exemplo, Main) implemetar um método para cadastrar novas despesas. Esse método deve solicitar ao usuário os dados da despesa (valor, data, descrição, etc.) e criar um novo objeto da classe Despesa com essas informações.
 
-*Um metodo de sobreescrita para que o usúario possa entrar com os dados de cada despesa.*
+*Um metodo de sobreescrita para que o usúario possa entrar com os dados de cada despesa deve ser implementado.*
 
-Para armazenar as Despesas pode-se criar uma lista (por exemplo, ArrayList) para armazenar os objetos Despesa. Criar um atributo na classe Main do tipo lista, e sempre que uma nova despesa for cadastrada, adicione-a a essa lista
+Para armazenar as Despesas pode-se criar uma lista por exemplo, ArrayList de despesas , para armazenar os objetos Despesa. Criar um atributo na classe Main do tipo lista, e sempre que uma nova despesa for cadastrada, adicione-a a essa lista
 
 ## Encapsulamento
-É recomedavél encapsular os atributos valor - *Imutabilidade* quando um atributo é encapsulado como valor, ele não pode ser alterado diretamente, o que garante que o valor seja imutável. Isso evita erros causados por modificações acidentais.
-Para manipular um atributo encapsulado em uma classe, é necessário definir métodos de acesso, também conhecidos como getters e setters. Pode-se controlar o acesso e a manipulação do atributo na classe, garantindo uma melhor organização e segurança do código.
+É recomedavél encapsular os atributos valor - Ao encapsular o atributo valor, ele não pode ser alterado diretamente, o que garante que o valor seja imutável. Isso evita erros causados por modificações acidentais. Para manipular o valor encapsulado em uma classe, é necessário definir métodos de acesso, também conhecidos como getters e setters. Pode-se controlar o acesso e a manipulação do valor na classe, garantindo maior segurança. Pois acidentalemte a dona encrenca pode querer alterar o valor que gostou no salão de beleza...
 
 ## Herança
 **Classes filhas** da classe Despesa pode-se criar tipos (categorias) de despesas como
@@ -62,14 +63,21 @@ Para manipular um atributo encapsulado em uma classe, é necessário definir mé
 
 ## Gerenciar Despesas.
 Para gerenciar as despesas criar uma classe principal que contenha uma lista de todas as despesas criadas. Pode-se criar uma Lita do tipo ArrayList para armazenar os objetos Despesas. Nessa classe principal terá métodos para adicionar, editar, alterar ou excluir uma despesa 
+
 No GerenciadorDespesa(){
 
-    Pode-se criar um menu de opções para executar o metodo desejado.
-    
+Pode-se criar um menu de opções para executar o metodo desejado.
+
 }
 
+## Gerenciar  usúario
+Para criar um usúario do sistema - definir nome do usuário e uma senha.
+Existi um usuário que tem privilegios - Portanto deve-se criar uma classe Usuário mãe.
+Nesta classe mãe terá os atributos nome, senha e um e-mail. 
+Para um usuário com privilegios além da senha será solicitado o cpf na hora de logar no sistema
+Apenas usuários com privilegios podem cadastrar e exluir novos usúarios e excluir Despesas.
 
-
+Deve conter um metodo de sobreecrita com o mesmo nome da Classe para que seja possivel entrar com os dados ao criar os novos objetos Usúario. As **senhas** devem ser criptografadas e conter uma regra - **Senhas** devem ter letras maisculas e minusculas, números, ao menos um elemento especial # * ; e no mínimo 10 caracteres. Ao digitar a senha incorreta por 3 vezes o usário será bloqueado. Este deve ir na opção esqueceu senha e informar seu dados, nome, e-mail e cpf. Uma link para redefinição de senha será enviado para o e-mail cadatrado. A nova senha não pode ser igual a anterior.
 
 
 ## Considerações Finas - POO.
